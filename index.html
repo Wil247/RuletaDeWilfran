@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rueda de Nombres</title>
+    <link rel="stylesheet" href="styles.css"> 
+
+</head>
+<body>
+    <nav>
+        <h1>Juego de Ruleta</h1>
+        <div>
+            <audio id="audio">
+                <source src="CHA-LA.wav" type="audio/mpeg">
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <label>
+                <input type="checkbox" id="musicCheckbox" onchange="toggleMusic()">
+                Reproducir Música
+            </label>
+        </div>
+    </nav>
+
+    <h2>Nombre Seleccionado: <span id="selectedName">Ninguno</span></h2>
+    <br><br><br><br><br>
+    
+    <div class="container">
+        <div class="name-container column-25">
+            <h3>Ingresa los nombres separados por comas o saltos de línea o la cantidad de participantes</h3>
+            <br>
+            <textarea id="nameInput" placeholder="Ejemplo de entrada:
+- Nombres separados por comas: Juan, Maria, Pedro, Luis
+- Nombres separados por saltos de línea:
+  Juan
+  Maria
+  Pedro
+  Luis
+- Cantidad de participantes: 23"></textarea>
+<br><br>
+            <button onclick="generateParticipants()">Generar Participantes</button>
+            <br>
+        </div>
+        <br><br>
+
+        <div class="wheel-container column-75">
+            <div class="wheel" id="wheel">
+                <div class="center">Girar</div>
+            </div>
+            <br>
+            <h3 id="currentName">Nombre Actual: Ninguno</h3>
+            <button onclick="toggleSpin()">Girar/Detener</button>
+        </div>
+        <br><br><br>
+    </div>
+
+    <script src="scripts.js"></script>
+
+    <div class="footer">
+        Creado por el Prof. Wilfran L Decena
+    </div>
+
+</body>
+</html>
